@@ -16,7 +16,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
-    /* box-shadow: 10px 10px 10px 10px red inset; */
 }
 
 .logo{
@@ -58,38 +57,63 @@ header{
     background-color: darkblue;
 }
 
+.nav_links li:hover .drop-down{
+    display: block;
+}
+
 .drop-down{
     display: none;
     position: absolute;
     top: 80px;
-    list-style: none;
     padding: 0;
+    padding-bottom: 10px;
     margin: 0;
     background: white;
     border-radius: 8px;
-    border: 1px;
-    /* border-color: black; */
+    border: 1px rgb(189, 189, 189);
+    border-style: solid;
+}
+
+.drop-down ul{
+    list-style: none;
 }
 
 .drop-down li{
-    padding: 20px;
+    padding: 20px 0px;
     text-decoration: none;
     display: list-item;
+    width: 200px;
+    transition: all 0.3s ease 0s;
 }
 
-.nav_links li:hover .drop-down{
+.drop-down li:hover{
+    background-color: rgb(236, 252, 251);
+}
+
+.drop-down li a{
+    font-size: 15px;
+}
+
+.drop-down2, .drop-down3{
+    display: none;
+    position: absolute;
+    top: 40px;
+}
+
+.menu:hover .drop-down2, .menu2:hover .drop-down3{
     display: block;
-    /* position: absolute; */
-    /* background: rgb(0,100,0); */
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 200px;
+    background: white;
+    border-radius: 8px;
+    border: 1px rgb(189, 189, 189);
+    border-style: solid;
 }
 
-
-
-
-
-
-
-
+.drop-down2 li{
+    width: 200px;
+}
 
 .no-wallet{
     text-align: center;
@@ -141,6 +165,7 @@ header{
 
 .indi-cards:hover{
     background-color: #00a4d6;
+    cursor: pointer;
 }
 
 .book-buy{
@@ -149,4 +174,5 @@ header{
 
 .book-buy .indi-cards:hover{
     background-color: #033b6d;
+    cursor: pointer;
 }
